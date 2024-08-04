@@ -1,6 +1,6 @@
 
 
-def process_message(message): #classifies each element as a trading signal or not, returns a list of all trading signals
+def process_message(message):
 
     """
     - this function takes the discord string posted to the Server as input
