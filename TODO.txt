@@ -1,0 +1,14 @@
+TODO:
+
+- finish the process_message() function in helper.py
+	- this function will be used in sever.py. It takes the incoming message POSTED to the server as input.
+	- we need to parse this message and turn it into a dictionary that our trading bot can use: {symbol:'Shitcoin', enter_price:1.20, exit_price:1.26}
+
+- need to implement the coinbase functions into the state machine
+	- the enter_positon() method in FSM class needs to be able to connect to coinbase and buy stuff
+	- the exit_position() method in FSM class needs to be able to connect to coinbase and sell stuff
+
+- need to add exit strategy logic
+	- in the run() method in FSM class we need to input the exit strategy logic inside of the if statement "if self.state = sell"
+	- this logic determines WHEN to use the exit_position() method
+	
