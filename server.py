@@ -8,9 +8,10 @@ signal_list: List[dict] = []
 
 @app.post("/postmessage/")
 async def from_discord(request: Request):
+    # Read the request body as a raw string
     message = await request.body()
-    message = message.decode('utf-8') # Read the request body as a raw string
-    signal = process_message(message)   # turn the string message into a trading signal 
+    message = message.decode('utf-8')
+    signal = process_message(message)
     signal_list.append(signal)
     print(signal_list)
 
@@ -20,7 +21,7 @@ async def to_signalbot():
     if len(signal_list) == 0:
         raise HTTPException(status_code=204, detail="No trading signals")
     else:
-        current_message = signal_list.pop(0) #send the first signal in the list to the trading bot
+        current_message = signal_list.pop(0)
         return current_message
 
 def start_server():

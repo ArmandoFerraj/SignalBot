@@ -5,7 +5,7 @@ def process_message(message): #classifies each element as a trading signal or no
     """
     - this function takes the discord string posted to the Server as input
     - we want to parse this string and create a well defined trading signal that our bot can use
-    - e.g.  
+    - trading signal e.g.  
     
     {symbol:'BTC', enter_price:1.20, exit_price:1.26}
     - """

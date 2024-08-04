@@ -1,8 +1,10 @@
 from StateMachine import FSM
 import requests
 
+
 url = 'http://localhost:8000/getmessage/'
 SIGNALBOT = FSM()
+
 
 while True:
 
