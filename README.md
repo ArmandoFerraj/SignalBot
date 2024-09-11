@@ -1,3 +1,6 @@
+Project Motivation:
+There are a plethora of communities on discord that offer trading signals for stocks and crypto currencies. The idea for this project is to build a bot that can take those signals and use them to automate trading.
+
 dependent libraries:
 - discord.py
 - httpx
